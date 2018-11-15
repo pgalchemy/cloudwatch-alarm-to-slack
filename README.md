@@ -18,3 +18,7 @@ Or use [marbot, a free chatbot ensuring you never miss an alert from Amazon Web 
 3. Install Node.js dependencies: `npm install`
 4. package the Lambda function code (replace `$UniqueSuffix` with e.g. your username): `aws --region us-east-1 cloudformation package --s3-bucket cw-to-slack-$UniqueSuffix  --template-file template.yml --output-template-file template.sam.yml`
 5. Deploy the CloudFormation stack (replace `$WebhookURL` with your URL from Slack): `aws --region us-east-1 cloudformation deploy --parameter-overrides "WebhookURL=$WebhookURL" --template-file template.sam.yml --stack-name cw-to-slack --capabilities CAPABILITY_IAM`
+
+
+1. `aws --region us-east-1 cloudformation package --s3-bucket cw-to-slack-osa --template-file template.yml --output-template-file template.sam.yml`
+2. `aws --region us-east-1 cloudformation deploy --parameter-overrides "WebhookURL=https://hooks.slack.com/services/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" --template-file template.sam.yml --stack-name cw-to-slack --capabilities CAPABILITY_IAM`
