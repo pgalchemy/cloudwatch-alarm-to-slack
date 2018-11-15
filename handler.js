@@ -71,5 +71,8 @@ exports.event = (event, context, cb) => {
   console.log(`event received: ${JSON.stringify(event)}`);
   Promise.all(event.Records.map(processRecord))
     .then(() => cb(null))
-    .catch((err) => cb(err));
+    .catch((err) => {
+      console.log('Error', err);
+      cb(err);
+    });
 };
