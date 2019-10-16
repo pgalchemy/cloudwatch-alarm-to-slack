@@ -1,0 +1,13 @@
+service: cw-to-slack-sns
+provider:
+  name: aws
+  runtime: nodejs10.x
+  role: ${file(./config/${opt:stage, self:provider.stage}.yml):aws.role}
+  description: 'Cloudwatch to Slack SNS'
+  deploymentBucket:
+    name: cw-to-slack-deploymentbucket-${opt:stage}-${opt:region}
+
+functions:
+  slack-notify:
+    handler: handler.handler
+    time: 30
