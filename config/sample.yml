@@ -1,0 +1,4 @@
+environment:
+  WEBHOOK_URL: WEBHOOK_URL
+aws:
+  role: AWS_ROLE
