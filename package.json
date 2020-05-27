@@ -8,19 +8,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/widdix/cloudwatch-alarm-to-slack.git"
+    "url": "git+https://github.com/pgalchemy/osa-cw-slack-alert.git"
   },
   "keywords": [
     "aws",
     "cloudwatch",
     "slack"
   ],
-  "author": "Michael Wittig <michael@widdix.de>",
+  "author": "gabriel<gabriel@alchemy.codes>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/widdix/cloudwatch-alarm-to-slack/issues"
+    "url": "https://github.com/pgalchemy/osa-cw-slack-alert/issues"
   },
-  "homepage": "https://github.com/widdix/cloudwatch-alarm-to-slack#readme",
+  "homepage": "https://github.com/pgalchemy/osa-cw-slack-alert#readme",
   "devDependencies": {
     "eslint": "^4.19.1",
     "eslint-config-google": "^0.9.1"

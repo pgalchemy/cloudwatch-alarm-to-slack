@@ -21,4 +21,4 @@ Or use [marbot, a free chatbot ensuring you never miss an alert from Amazon Web 
 
 
 1. `aws --region us-east-1 cloudformation package --s3-bucket cw-to-slack-osa --template-file template.yml --output-template-file template.sam.yml`
-2. `aws --region us-east-1 cloudformation deploy --parameter-overrides "WebhookURL=https://hooks.slack.com/services/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" --template-file template.sam.yml --stack-name cw-to-slack --capabilities CAPABILITY_IAM`
+2. `aws --region us-east-1 cloudformation deploy --parameter-overrides "WebhookURL=$WebhookURL" --template-file template.sam.yml --stack-name cw-to-slack --capabilities CAPABILITY_IAM`
